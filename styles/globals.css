@@ -1,0 +1,51 @@
+@tailwind base;
+
+@layer base {
+  ::selection {
+    @apply text-zinc-50 bg-orange-500;
+  }
+
+  body {
+    @apply bg-zinc-900 text-zinc-50;
+  }
+
+  h2 {
+    @apply text-4xl font-semibold tracking-normal;
+  }
+
+  h3 {
+    @apply font-semibold  text-zinc-50 text-2xl;
+  }
+
+  h1 {
+    @apply text-5xl lg:text-7xl font-semibold;
+  }
+
+  p {
+    @apply text-justify;
+  }
+
+  button {
+    @apply font-semibold transition duration-300 ease-out hover:ease-in text-xl;
+  }
+
+  a {
+    @apply transition duration-300 ease-out hover:ease-in;
+  }
+
+  mark {
+    @apply bg-transparent text-sky-500;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
