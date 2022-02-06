@@ -6,18 +6,18 @@ export const Article = () => {
     <>
       <div className="container px-6 lg:w-1/2 mx-auto">
         <p className="text-center  tracking-tighter text-zinc-400 pt-24">
-          A little about me
+          about me
         </p>
         <div id="article" className="prose pt-6">
-          <h2>
-            Working on fun projects{" "}
+          <h2 className="lg:pb-2">
+            yea, I love doing{" "}
             <a
               href="https://oiaskin.co"
               target="_blank"
               rel="noopener noreferrer"
-              className="decoration-4 underline underline-offset-2 decoration-orange-500"
+              className="decoration-4 underline underline-offset-2 decoration-orange-500 "
             >
-              for a living
+              {`lots of different things.`}
             </a>
           </h2>
           <img
@@ -26,21 +26,74 @@ export const Article = () => {
             className="float-left rounded-xl lg:h-80 w-full lg:w-auto lg:px-0 overflow-hidden my-6 lg:my-0 lg:mr-4 lg:mt-4"
           />
           <p className="text-xl   text-zinc-400 leading-looser pb-6 lg:mt-2">
-            Oia started out as a small dropshipping brand in 2020, but saw
-            overnight success by going viral on facebook. The brand scaled very
-            quickly to 8 figures. This was larely due in part to{" "}
-            <span className=" text-orange-300">UGC ads.</span> We consistently
-            tested new UGC ads for Oia to achieve the best results.
+            {`if you're reading this, you've probably stumbled upon my site from
+            something I sent you. That's great! Here you can learn all about my
+            projects and how we might be able to help eachother. `}
+            <a href="#" className=" text-orange-300">
+              2021 was an amazing year for me.
+            </a>{" "}
+            I learned to code, opened a photo-studio and launched tons of other
+            side projects. check out the full list{" "}
+            <a href="#" className=" text-orange-300">
+              here.
+            </a>
           </p>
-          <h3>No wasting time</h3>
+          <h3>from idea to shipped!</h3>
           <p className="text-xl   text-zinc-400 leading-looser py-6 lg:py-0 lg:mt-2">
-            One thing that was unique to Oia was how aggressive of a UGC
-            campaign we led.{" "}
-            <span className=" text-orange-300">Over 100 micro-influencers</span>{" "}
-            {`from Youtube and 100's`}
-            more from Instagram were found to provide content for the brand.
-            This two for one strategy allowed us to scale on both evergreen
-            channels and short-term social media driven ones.
+            {`over the past year, i've changed my attitude from idea creator to
+            idea shipper. we all learn by doing, and taking advantage of what
+            Tony Robbin's calls 'massive action' is the best way I've found to
+            either learn something new or start something awesome.`}
+          </p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export const Roadmap = () => {
+  return (
+    <>
+      <div className="container px-6 lg:w-1/2 mx-auto mb-24">
+        <p className="text-center  tracking-tighter text-zinc-400 ">
+          personal roadmap
+        </p>
+        <div id="roadmap" className="prose pt-6">
+          <h2 className="lg:pb-2">
+            {`here's what I'm shipping `}
+            <a
+              href="https://oiaskin.co"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="decoration-4 underline underline-offset-2 decoration-orange-500 "
+            >
+              {`in 2022.`}
+            </a>
+          </h2>
+          <img
+            src="/images/roadmap.jpg"
+            alt="blog_main"
+            className="float-right rounded-xl lg:h-80 w-full lg:w-auto lg:px-0 overflow-hidden my-6 lg:my-0 lg:ml-4 lg:mt-4"
+          />
+          <p className="text-xl   text-zinc-400 leading-looser pb-6 lg:mt-2">
+            {`if you're reading this, you've probably stumbled upon my site from
+            something I sent you. That's great! Here you can learn all about my
+            projects and how we might be able to help eachother. `}
+            <a href="#" className=" text-orange-300">
+              2021 was an amazing year for me.
+            </a>{" "}
+            I learned to code, opened a photo-studio and launched tons of other
+            side projects. check out the full list{" "}
+            <a href="#" className=" text-orange-300">
+              here.
+            </a>
+          </p>
+          <h3>from idea to shipped!</h3>
+          <p className="text-xl   text-zinc-400 leading-looser py-6 lg:py-0 lg:mt-2">
+            {`over the past year, i've changed my attitude from idea creator to
+            idea shipper. we all learn by doing, and taking advantage of what
+            Tony Robbin's calls 'massive action' is the best way I've found to
+            either learn something new or start something awesome.`}
           </p>
         </div>
       </div>
@@ -51,11 +104,18 @@ export const Article = () => {
 export const Youtube = () => {
   return (
     <>
-      <div className="lg:w-2/3 mx-auto lg:mt-24 mt-12 mb-6">
-        <h2 className=" text-center pb-6">Recent Videos📸</h2>
-        <p className="text-xl  px-6 text-zinc-400 leading-looser py-6 lg:py-0 lg:mt-2 ">
-          {`In 2020 I started a small YouTube channel about cameras and more specifically, film cameras. This is one of my creative outlets to `}
-          <span className=" text-orange-300">just let go and have fun.</span>
+      <div className="lg:w-2/3 mx-auto mb-6">
+        <h1 className="text-center  tracking-tighter text-zinc-50  pb-6 z-20">
+          recent videos
+        </h1>
+        <div className="relative w-full max-w-lg mx-auto">
+          <div className="absolute lg:-bottom-8  -bottom-14 left-12 w-48 h-24 bg-rose-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70 z-50"></div>
+          <div className="absolute lg:-bottom-8 -bottom-14 -right-4 w-48 h-24 bg-pink-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70  z-50"></div>
+          <div className="absolute lg:-bottom-8 -bottom-14 left-48 w-48 h-24 bg-violet-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70  z-50"></div>
+        </div>
+        <p className="text-xl  px-6 text-zinc-400 leading-looser py-6 lg:py-0 lg:mt-2 relative z-50">
+          {`my recent creative outlet has been YouTube. if you're curious about my video projects `}
+          <span className=" text-orange-300">check out the channel too!</span>
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:w-2/3 mx-auto gap-6 px-6 lg:mb-24 mb-12">
@@ -89,36 +149,36 @@ export const Hero = () => {
   return (
     <div className="mt-12 lg:mt-24 ">
       <h1 className="text-center lg:mt-24 mt-12 z-20 relative">
-        Blogging about dev, marketing, and video making
+        blogging about dev, marketing, and filmmaking
       </h1>
       <div className="relative w-full max-w-lg mx-auto">
-        <div className="absolute lg:-bottom-8  -bottom-14 left-12 w-48 h-48 bg-blue-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob z-50"></div>
-        <div className="absolute lg:-bottom-8 -bottom-14 -right-4 w-48 h-48 bg-orange-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob  z-50"></div>
-        <div className="absolute lg:-bottom-8 -bottom-14 left-48 w-48 h-48 bg-purple-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob  z-50"></div>
+        <div className="absolute lg:-bottom-8  -bottom-14 left-12 w-48 h-48 bg-blue-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70 z-50"></div>
+        <div className="absolute lg:-bottom-8 -bottom-14 -right-4 w-48 h-48 bg-orange-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70  z-50"></div>
+        <div className="absolute lg:-bottom-8 -bottom-14 left-48 w-48 h-48 bg-purple-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70  z-50"></div>
       </div>
     </div>
   );
 };
 
-export const About = ({ data }) => {
+export const Projects = ({ data }) => {
   return (
-    <div className="relative w-full  mx-auto px-6 lg:px-0 lg:mb-48  mb-24">
-      <h1 className="text-center  tracking-tighter text-zinc-50 pt-24 lg:pt-48 pb-12 z-50">
-        My Projects
+    <div className="relative w-full  mx-auto px-6 lg:px-0  mb-24">
+      <h1 className="text-center  tracking-tighter text-zinc-50 pt-24  pb-12 z-20">
+        my projects
       </h1>
-      <div className="relative w-full max-w-lg mx-auto ">
-        <div className="absolute -bottom-8 left-12 w-48 lg:h-48 h-36 bg-green-500/70 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob z-0"></div>
-        <div className="absolute -bottom-8 -right-4 w-48 lg:h-48 h-36 bg-emerald-500/70 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob  z-0"></div>
-        <div className="absolute -bottom-8 left-48 w-48 lg:h-48 h-36 bg-sky-500/70 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob  z-0"></div>
+      <div className="relative w-full max-w-lg mx-auto">
+        <div className="absolute lg:-bottom-8  -bottom-14 left-12 w-48 h-24 bg-blue-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70 z-50"></div>
+        <div className="absolute lg:-bottom-8 -bottom-14 -right-4 w-48 h-24 bg-sky-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70  z-50"></div>
+        <div className="absolute lg:-bottom-8 -bottom-14 left-48 w-48 h-24 bg-teal-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70  z-50"></div>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 lg:mx-12">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:mx-12 z-50">
         {data.allArticles.map((e, i) => {
           return (
             <>
-              <Link key={i} href={`/posts/${e.slug}`}>
-                <div className="flex flex-col justify-between  shadow-xl rounded-xl p-4 cursor-pointer transition duration-300 ease-out hover:ease-in hover:scale-105">
-                  <p className="m-2 text-center">{e.title}</p>
+              <Link key={i} href={`/projects/${e.slug}`}>
+                <div className="flex flex-col justify-between z-50  shadow-xl rounded-xl p-4 cursor-pointer transition duration-300 ease-out hover:ease-in hover:scale-105">
+                  <p className="m-2 text-center ">{e.title}</p>
 
                   <div className="relative rounded-xl m-2 mt-4 h-40 overflow-hidden">
                     <img
@@ -138,70 +198,16 @@ export const About = ({ data }) => {
 
 export const Cta = () => {
   return (
-    <div className="container relative w-full  mx-auto px-6  lg:mt-48 mb-24">
-      <h1 className="text-center pt-24 pb-6">{`Want more ideas?`}</h1>
-      <div className="flex space-x-4 justify-center items-center z-10">
-        <div
-          id="cta_details"
-          className=" z-10 text-zinc-200 text-xs lg:text-xl flex justify-center items-center font-semibold"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="md:mx-2 h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-          Over 143 ads launched.
-        </div>
-        <div
-          id="cta_details"
-          className=" z-10 text-zinc-200 text-xs lg:text-xl flex justify-center items-center font-semibold"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="md:mx-2 h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-          Global team.
-        </div>
-        <div
-          id="cta_details"
-          className=" z-10 text-zinc-200 text-xs lg:text-xl flex justify-center items-center font-semibold"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="md:mx-2 h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-          Honest marketing.
-        </div>
+    <div className="container relative w-full  mx-auto px-6 mb-24">
+      <h1 className="text-center pt-24 pb-6 z-50">{`want help shipping?`}</h1>
+      <div className="relative w-full max-w-lg mx-auto">
+        <div className="absolute lg:-bottom-8  -bottom-14 left-12 w-48 h-24 bg-orange-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70 z-20"></div>
+        <div className="absolute lg:-bottom-8 -bottom-14 -right-4 w-48 h-24 bg-red-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70  z-20"></div>
+        <div className="absolute lg:-bottom-8 -bottom-14 left-48 w-48 h-24 bg-yellow-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70  z-20"></div>
       </div>
+      <p className="text-xl text-center  text-zinc-200 leading-looser py-6 lg:py-0 lg:mt-2 lg:w-1/2 mx-auto relative z-50">
+        {`follow to get tips & tricks about shipping stuff fast.`}
+      </p>
 
       <button
         disabled={true}
@@ -213,11 +219,8 @@ export const Cta = () => {
           rel="noopener noreferrer"
           className="font-semibold transition duration-300 ease-out hover:ease-in text-xl cursor-pointer z-10 rounded-xl text-zinc-50 p-4 hover:bg-zinc-500 bg-zinc-900  tracking-tight"
         >
-          Sure!
+          sure!
         </a>
-        <div className="absolute inset-0  w-24 h-4 bg-green-500 rounded-full  filter blur-xl z-0"></div>
-        <div className="absolute right-0 w-24 h-4 bg-emerald-500 rounded-full  filter blur-xl  z-0"></div>
-        <div className="absolute left-5  w-24 h-4 bg-sky-500 rounded-full  filter blur-xl  z-0"></div>
       </button>
 
       <p className="text-center  tracking-tighter text-zinc-400 pt-6"></p>
@@ -297,6 +300,24 @@ export const Footer = () => {
             <span className="hover:text-zinc-300 cursor-pointer">{`Privacy Policy`}</span>
           </Link>
         </div>
+      </div>
+    </>
+  );
+};
+
+export const Navbar = () => {
+  return (
+    <>
+      <div className="absolute flex justify-center  lg:justify-end space-x-4 p-6 w-full inset-0 ">
+        <Link href="/">
+          <span className="hover:text-orange-500 cursor-pointer">home</span>
+        </Link>
+        <Link href="/projects">
+          <span className="hover:text-orange-500 cursor-pointer">projects</span>
+        </Link>
+        <Link href="/contact">
+          <span className="hover:text-orange-500 cursor-pointer">contact</span>
+        </Link>
       </div>
     </>
   );

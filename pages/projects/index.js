@@ -35,13 +35,13 @@ export default function Posts({ data }) {
         </div>
 
         <div id="article" className="container px-6 lg:w-3/5 mx-auto ">
-          <h1 className="text-center  tracking-tighter text-zinc-900 pt-12 lg:pt-24 pb-12">
-            Blog
+          <h1 className="text-center  tracking-tighter text-zinc-50 pt-12 lg:pt-24 pb-12">
+            projects
           </h1>
           <div className="relative w-full max-w-lg mx-auto">
-            <div className="absolute -bottom-8 left-12 w-48 h-48 bg-blue-500/20 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob z-0"></div>
-            <div className="absolute -bottom-8 -right-4 w-48 h-48 bg-pink-500/20 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob  z-0"></div>
-            <div className="absolute -bottom-8 left-48 w-48 h-48 bg-purple-500/20 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob  z-0"></div>
+            <div className="absolute -bottom-8 left-12 w-48 h-48 bg-blue-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70  z-20"></div>
+            <div className="absolute -bottom-8 -right-4 w-48 h-48 bg-pink-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70   z-20"></div>
+            <div className="absolute -bottom-8 left-48 w-48 h-48 bg-purple-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70   z-20"></div>
           </div>
         </div>
         <div className="px-6 lg:px-0 grid md:grid-cols-3 lg:grid-cols-5 mb-24 gap-6">

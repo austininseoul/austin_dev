@@ -1,11 +1,12 @@
 import Head from "next/head";
 import {
-  About,
+  Projects,
   Article,
-  Cta,
   Hero,
   Youtube,
   Footer,
+  Navbar,
+  Roadmap,
 } from "../components/components";
 import { request } from "../lib/datocms";
 import { Logo } from "../components/logo";
@@ -38,14 +39,16 @@ export default function Home({ data }) {
         <title>{`austin w's blog`}</title>
       </Head>
       <div className="">
+        <Navbar></Navbar>
         <main id="main" className="container mx-auto min-h-screen">
-          <div className="pt-6 lg:pt-24">
+          <div className="pt-24">
             {" "}
             <Logo />
           </div>
           <Hero />
           <Article />
-          <About data={data} />
+          <Projects data={data} />
+          <Roadmap />
           <Youtube />
           <Footer />
         </main>
