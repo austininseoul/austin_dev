@@ -12,7 +12,7 @@ import { request } from "../lib/datocms";
 import { Logo } from "../components/logo";
 
 const HOMEPAGE_QUERY = `query {
-  allArticles {
+  allProjects {
       thumbnail {
         url
       }

@@ -34,7 +34,11 @@
   }
 
   mark {
-    @apply bg-transparent text-sky-500;
+    @apply bg-transparent text-orange-500;
+  }
+
+  code {
+    @apply font-mono;
   }
 }
 
