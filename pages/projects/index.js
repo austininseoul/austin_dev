@@ -5,7 +5,7 @@ import { Logo } from "../../components/logo";
 import Link from "next/link";
 
 const HOMEPAGE_QUERY = `query {
-    allArticles {
+    allProjects {
         thumbnail {
           url
         }
@@ -45,10 +45,10 @@ export default function Posts({ data }) {
           </div>
         </div>
         <div className="px-6 lg:px-0 grid md:grid-cols-3 lg:grid-cols-5 mb-24 gap-6">
-          {data.allArticles.map((e, i) => {
+          {data.allProjects.map((e, i) => {
             return (
               <>
-                <Link href={`/posts/${e.slug}`}>
+                <Link href={`/projects/${e.slug}`}>
                   <div
                     key={i}
                     className="flex flex-col justify-between  shadow-xl rounded-xl p-4 cursor-pointer transition duration-300 ease-out hover:ease-in hover:scale-105"

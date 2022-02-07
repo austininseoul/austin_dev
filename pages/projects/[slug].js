@@ -4,9 +4,13 @@ import { Cta, Footer } from "../../components/components";
 import { Logo } from "../../components/logo";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
+import Highlight, { defaultProps } from "prism-react-renderer";
+import theme from "prism-react-renderer/themes/dracula";
+import { CopyBlock, dracula } from "react-code-blocks";
 
 const HOMEPAGE_QUERY = `query {
-    allArticles {
+    allProjects {
         id
         title
         slug
@@ -30,13 +34,13 @@ const HOMEPAGE_QUERY = `query {
           }
         }
       }
-      _allArticlesMeta {
+      _allProjectsMeta {
         count
       }
   }`;
 
 const SLUG_QUERY = `query {
-    allArticles {
+    allProjects {
         slug
       }
   }`;
@@ -47,7 +51,7 @@ export async function getStaticProps(ctx) {
     variables: { limit: 10 },
   });
 
-  const [results] = data.allArticles.filter((e) => {
+  const [results] = data.allProjects.filter((e) => {
     if (e.slug === ctx.params.slug) return e;
   });
 
@@ -62,7 +66,7 @@ export async function getStaticPaths() {
     variables: { limit: 10 },
   });
 
-  const paths = data.allArticles.map((e) => {
+  const paths = data.allProjects.map((e) => {
     return { params: { slug: e.slug } };
   });
 
@@ -80,7 +84,7 @@ export default function Slug({ results }) {
           {e.heading && <h3 className="pt-4 lg:pt-12">{e.heading}</h3>}
           <div
             key={i}
-            className="text-xl  text-zinc-700 whitespace-pre-wrap leading-looser pb-6 lg:mt-2"
+            className="text-xl  text-zinc-300 whitespace-pre-wrap leading-looser pb-6 lg:mt-2"
           >
             <StructuredText data={e.body} />
           </div>
@@ -116,7 +120,7 @@ export default function Slug({ results }) {
                 objectFit="cover"
               />
             </div>
-            <div className="text-center  tracking-tighter text-zinc-700 lg:pt-4 pb-12">
+            <div className="text-center  tracking-tighter text-zinc-300 lg:pt-4 pb-12">
               {e.caption}
             </div>
           </>
@@ -125,8 +129,19 @@ export default function Slug({ results }) {
     }
   });
 
+  const exampleCode = `function someDemo() {
+    var test = "Hello World!";
+    console.log(test);
+};
+
+return () => <App />;
+`;
+
   return (
     <>
+      <Head>
+        <title>{results.title}</title>
+      </Head>
       <main id="main" className="container mx-auto min-h-screen">
         <div className="pt-6 lg:pt-24">
           {" "}
@@ -134,22 +149,26 @@ export default function Slug({ results }) {
         </div>
 
         <div id="article" className="container px-6 lg:w-3/5 mx-auto ">
-          <h1 className="text-center  tracking-tighter text-zinc-900 pt-12 lg:pt-24 pb-12">
-            <Link href="/posts">
-              <p className="text-center text-2xl tracking-normal text-zinc-700 cursor-pointer pb-4 decoration-4 underline underline-offset-2 decoration-sky-500">
-                Posts
+          <h1 className="text-center  tracking-tighter text-zinc-50 pt-12 lg:pt-24 pb-12">
+            <Link href="/projects">
+              <p className="text-center text-2xl tracking-normal text-zinc-300 cursor-pointer pb-4 decoration-4 underline underline-offset-2 decoration-orange-500">
+                projects
               </p>
             </Link>
             {results.title}
           </h1>
-          <div className="relative w-full max-w-lg mx-auto">
-            <div className="absolute -bottom-8 left-12 w-48 h-48 bg-blue-500/20 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob z-0"></div>
-            <div className="absolute -bottom-8 -right-4 w-48 h-48 bg-pink-500/20 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob  z-0"></div>
-            <div className="absolute -bottom-8 left-48 w-48 h-48 bg-purple-500/20 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob  z-0"></div>
-          </div>
           {html.map((e) => {
             return e;
           })}
+          <div className="font-mono">
+            <CopyBlock
+              text={exampleCode}
+              theme={dracula}
+              language="jsx"
+              codeBlock
+              wrapLines
+            />
+          </div>
         </div>
 
         <Footer />

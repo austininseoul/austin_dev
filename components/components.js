@@ -173,7 +173,7 @@ export const Projects = ({ data }) => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:mx-12 z-50">
-        {data.allArticles.map((e, i) => {
+        {data.allProjects.map((e, i) => {
           return (
             <>
               <Link key={i} href={`/projects/${e.slug}`}>

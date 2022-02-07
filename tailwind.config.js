@@ -9,6 +9,7 @@ module.exports = {
       fontFamily: {
         // sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         sans: ["Outfit", "sans-serif"],
+        mono: ["Fira Code", "monospace"],
       },
       animation: {
         blob: "blob 7s infinite",

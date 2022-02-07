@@ -38,6 +38,10 @@ export default function Document() {
           }
           rel="stylesheet"
         ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap"
+          rel="stylesheet"
+        ></link>
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=G-DVHX72W0XY`}
