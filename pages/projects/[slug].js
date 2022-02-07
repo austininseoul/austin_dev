@@ -32,6 +32,12 @@ const HOMEPAGE_QUERY = `query {
             caption
             link
           }
+          ... on CodeBlockRecord {
+            __typename
+           markdown {
+            value
+          }
+          }
         }
       }
       _allProjectsMeta {
@@ -127,15 +133,20 @@ export default function Slug({ results }) {
         );
       }
     }
+    if (e.__typename === "CodeBlockRecord") {
+      return (
+        <div className="font-mono">
+          <CopyBlock
+            text={e.markdown.value.document.children[0].code}
+            theme={dracula}
+            language={e.markdown.value.document.children[0].language}
+            codeBlock
+            wrapLines
+          />
+        </div>
+      );
+    }
   });
-
-  const exampleCode = `function someDemo() {
-    var test = "Hello World!";
-    console.log(test);
-};
-
-return () => <App />;
-`;
 
   return (
     <>
@@ -160,15 +171,6 @@ return () => <App />;
           {html.map((e) => {
             return e;
           })}
-          <div className="font-mono">
-            <CopyBlock
-              text={exampleCode}
-              theme={dracula}
-              language="jsx"
-              codeBlock
-              wrapLines
-            />
-          </div>
         </div>
 
         <Footer />
