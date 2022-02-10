@@ -1,13 +1,12 @@
 import { request } from "../../lib/datocms";
 import { StructuredText } from "react-datocms";
-import { Cta, Footer } from "../../components/components";
+import { Cta, Footer, Navbar } from "../../components/components";
 import { Logo } from "../../components/logo";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
-import Highlight, { defaultProps } from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/dracula";
 import { CopyBlock, dracula } from "react-code-blocks";
+import { Image as ResponsiveImage } from "react-datocms";
 
 const HOMEPAGE_QUERY = `query {
     allProjects {
@@ -27,6 +26,19 @@ const HOMEPAGE_QUERY = `query {
           ... on ImageBlockRecord {
             __typename
             image {
+              responsiveImage {
+                alt
+                base64
+                bgColor
+                title
+                srcSet
+                webpSrcSet
+                sizes
+                src
+                width
+                height
+                aspectRatio
+              }
               url
             }
             caption
@@ -60,7 +72,6 @@ export async function getStaticProps(ctx) {
   const [results] = data.allProjects.filter((e) => {
     if (e.slug === ctx.params.slug) return e;
   });
-
   return {
     props: { results },
   };
@@ -103,7 +114,7 @@ export default function Slug({ results }) {
           <div className="pb-6">
             <a key={i} href={e.link}>
               <video
-                className="mx-auto rounded-xl lg:w-80 w-2/3 shadow-xl"
+                className="mx-auto rounded-xl   shadow-xl"
                 src={e.image.url}
                 alt={e.caption}
                 autoPlay={true}
@@ -117,16 +128,16 @@ export default function Slug({ results }) {
           <>
             <div
               key={i}
-              className="relative mx-auto rounded-xl h-80 lg:w-1/2 overflow-hidden shadow-xl"
+              className="relative mx-auto rounded-xl h-80 lg:w-1/2 overflow-hidden shadow-xl  pb-12 mt-12"
             >
-              <Image
+              <ResponsiveImage
                 layout="fill"
-                src={e.image.url}
-                alt={e.caption}
                 objectFit="cover"
+                data={e.image.responsiveImage}
               />
             </div>
-            <div className="text-center  tracking-tighter text-zinc-300 lg:pt-4 pb-12">
+
+            <div className="text-center  tracking-tighter text-zinc-300 lg:pt-4 p-12 pt-4">
               {e.caption}
             </div>
           </>
@@ -135,7 +146,7 @@ export default function Slug({ results }) {
     }
     if (e.__typename === "CodeBlockRecord") {
       return (
-        <div className="font-mono">
+        <div className="font-mono ">
           <CopyBlock
             text={e.markdown.value.document.children[0].code}
             theme={dracula}
@@ -153,8 +164,9 @@ export default function Slug({ results }) {
       <Head>
         <title>{results.title}</title>
       </Head>
+      <Navbar />
       <main id="main" className="container mx-auto min-h-screen">
-        <div className="pt-6 lg:pt-24">
+        <div className="pt-24">
           {" "}
           <Logo />
         </div>
