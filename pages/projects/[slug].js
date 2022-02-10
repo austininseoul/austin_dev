@@ -3,9 +3,9 @@ import { StructuredText } from "react-datocms";
 import { Cta, Footer, Navbar } from "../../components/components";
 import { Logo } from "../../components/logo";
 import Link from "next/link";
+import Image from "next/image";
 import Head from "next/head";
 import { CopyBlock, dracula } from "react-code-blocks";
-import { Image as ResponsiveImage } from "react-datocms";
 
 const HOMEPAGE_QUERY = `query {
     allProjects {
@@ -25,19 +25,6 @@ const HOMEPAGE_QUERY = `query {
           ... on ImageBlockRecord {
             __typename
             image {
-              responsiveImage {
-                alt
-                base64
-                bgColor
-                title
-                srcSet
-                webpSrcSet
-                sizes
-                src
-                width
-                height
-                aspectRatio
-              }
               url
             }
             caption
@@ -71,6 +58,7 @@ export async function getStaticProps(ctx) {
   const [results] = data.allProjects.filter((e) => {
     if (e.slug === ctx.params.slug) return e;
   });
+
   return {
     props: { results },
   };
@@ -129,13 +117,13 @@ export default function Slug({ results }) {
               key={i}
               className="relative mx-auto rounded-xl h-80 lg:w-1/2 overflow-hidden shadow-xl  pb-12 mt-12"
             >
-              <ResponsiveImage
+              <Image
                 layout="fill"
+                src={e.image.url}
+                alt={e.caption}
                 objectFit="cover"
-                data={e.image.responsiveImage}
               />
             </div>
-
             <div className="text-center  tracking-tighter text-zinc-300 lg:pt-4 p-12 pt-4">
               {e.caption}
             </div>

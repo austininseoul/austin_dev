@@ -3,25 +3,11 @@ import { StructuredText } from "react-datocms";
 import { Cta, Footer } from "../../components/components";
 import { Logo } from "../../components/logo";
 import Link from "next/link";
-import { Image as ResponsiveImage } from "react-datocms";
 
 const HOMEPAGE_QUERY = `query {
     allProjects {
         thumbnail {
           url
-          responsiveImage {
-            alt
-            base64
-            bgColor
-            title
-            srcSet
-            webpSrcSet
-            sizes
-            src
-            width
-            height
-            aspectRatio
-          }
         }
         title
         slug
@@ -70,11 +56,10 @@ export default function Posts({ data }) {
                     <p className="m-2 text-center">{e.title}</p>
 
                     <div className="relative rounded-xl m-2 mt-4 h-40 overflow-hidden">
-                      <ResponsiveImage
-                        layout="fill"
-                        objectFit="cover"
-                        data={e.thumbnail.responsiveImage}
-                      />
+                      <img
+                        className="absolute inset-0  w-full"
+                        src={e.thumbnail.url}
+                      ></img>
                     </div>
                   </div>
                 </Link>
