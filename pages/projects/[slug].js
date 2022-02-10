@@ -3,7 +3,6 @@ import { StructuredText } from "react-datocms";
 import { Cta, Footer, Navbar } from "../../components/components";
 import { Logo } from "../../components/logo";
 import Link from "next/link";
-import Image from "next/image";
 import Head from "next/head";
 import { CopyBlock, dracula } from "react-code-blocks";
 import { Image as ResponsiveImage } from "react-datocms";
