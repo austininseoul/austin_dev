@@ -235,7 +235,7 @@ export const Footer = () => {
 
       <div className="flex justify-center text-orange-500 items-start space-x-4">
         <a
-          href="https://instagram.com/sellonsocial"
+          href="https://instagram.com/austininseoul"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:scale-105 "
@@ -252,7 +252,7 @@ export const Footer = () => {
           </svg>
         </a>
         <a
-          href="#"
+          href="https://twitter.com/austininseoul"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:scale-105"
@@ -269,7 +269,7 @@ export const Footer = () => {
           </svg>
         </a>
         <a
-          href="https://youtube.com/sellonsocial"
+          href="https://www.youtube.com/channel/UCP2_SoetBG83lnuRM1ALZig"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:scale-105"
@@ -308,7 +308,7 @@ export const Footer = () => {
 export const Navbar = () => {
   return (
     <>
-      <div className="absolute flex justify-center  lg:justify-end space-x-4 p-6 w-full inset-0 ">
+      <div className="absolute flex justify-center items-center  lg:justify-end space-x-4 p-6 w-full inset-0  h-10">
         <Link href="/">
           <span className="hover:text-orange-500 cursor-pointer">home</span>
         </Link>

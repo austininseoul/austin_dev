@@ -40,6 +40,10 @@
   code {
     @apply font-mono;
   }
+
+  u {
+    @apply decoration-2 underline underline-offset-2 decoration-orange-500;
+  }
 }
 
 @tailwind components;
