@@ -5,14 +5,14 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:title" content="sellonsocial" />
+        <meta property="og:title" content="austin blog" />
         <meta property="og:type" content="website" />
+        <meta property="og:description" content="austin dev blog" />
         <meta
-          property="og:description"
-          content="modern ugc social media ads agency"
+          property="og:url"
+          content="austin's blog on dev, filmmaking + marketing"
         />
-        <meta property="og:url" content="https://sellonsocial.co" />
-        <meta property="og:site_name" content="sellonsocial" />
+        <meta property="og:site_name" content="austin blog" />
         {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-0B064WJ050"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -52,7 +52,7 @@ export default function Document() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-DVHX72W0XY', {
+            gtag('config', 'G-W912M1JXTT', {
               page_path: window.location.pathname,
             });
           `,
