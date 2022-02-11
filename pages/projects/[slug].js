@@ -6,6 +6,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { CopyBlock, dracula } from "react-code-blocks";
 import { Image as ResponsiveImage } from "react-datocms";
+import VideoPlayer from "../../components/videoplayer";
 
 const HOMEPAGE_QUERY = `query {
     allProjects {
@@ -48,6 +49,12 @@ const HOMEPAGE_QUERY = `query {
            markdown {
             value
           }
+          }
+          ... on VideoBlockRecord {
+            __typename
+            clId
+            caption
+            link
           }
         }
       }
@@ -105,6 +112,29 @@ export default function Slug({ results }) {
             <StructuredText data={e.body} />
           </div>
         </>
+      );
+    }
+    if (e.__typename === "VideoBlockRecord") {
+      return (
+        <div key={i} className="pb-6 lg:pb-0">
+          {e.link ? (
+            <a target="_blank" rel="noopener noreferrer" href={e.link}>
+              <VideoPlayer
+                className="mx-auto overflow-hidden rounded-2xl"
+                publicId={e.clId}
+              />
+            </a>
+          ) : (
+            <VideoPlayer
+              className="mx-auto overflow-hidden rounded-2xl"
+              publicId={e.clId}
+            />
+          )}
+
+          <div className="text-center  tracking-tighter text-zinc-300 pt-4">
+            {e.caption}
+          </div>
+        </div>
       );
     }
     if (e.__typename === "ImageBlockRecord") {
