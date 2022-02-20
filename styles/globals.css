@@ -57,3 +57,13 @@
     animation-delay: 4s;
   }
 }
+
+@page {
+  size: auto; /* auto is the initial value */
+  margin: 0; /* this affects the margin in the printer settings */
+}
+
+@font-face {
+  font-family: "Batang";
+  src: local("Batang"), url(../public/fonts/IropkeBatangM.woff2) format("woff2");
+}

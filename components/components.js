@@ -176,7 +176,7 @@ export const Projects = ({ data }) => {
         {data.allProjects.map((e, i) => {
           return (
             <>
-              <Link key={i} href={`/projects/${e.slug}`}>
+              <Link passHref={true} key={i} href={`/projects/${e.slug}`}>
                 <div className="flex flex-col justify-between z-50  shadow-xl rounded-xl p-4 cursor-pointer transition duration-300 ease-out hover:ease-in hover:scale-105">
                   <p className="m-2 text-center ">{e.title}</p>
 
@@ -293,10 +293,10 @@ export const Footer = () => {
           austin w © Copyright 2022. All Rights Reserved.
         </p>
         <div className="text-zinc-400 flex space-x-4 ">
-          <Link href="/terms">
+          <Link passHref={true} href="/terms">
             <span className="hover:text-zinc-300 cursor-pointer">{`Terms & Conditions`}</span>
           </Link>
-          <Link href="/privacy">
+          <Link passHref={true} href="/privacy">
             <span className="hover:text-zinc-300 cursor-pointer">{`Privacy Policy`}</span>
           </Link>
         </div>
@@ -309,13 +309,13 @@ export const Navbar = () => {
   return (
     <>
       <div className="absolute flex justify-center items-center  lg:justify-end space-x-4 p-6 w-full inset-0  h-10">
-        <Link href="/">
+        <Link passHref={true} href="/">
           <span className="hover:text-orange-500 cursor-pointer">home</span>
         </Link>
-        <Link href="/projects">
+        <Link passHref={true} href="/projects">
           <span className="hover:text-orange-500 cursor-pointer">projects</span>
         </Link>
-        <Link href="/contact">
+        <Link passHref={true} href="/contact">
           <span className="hover:text-orange-500 cursor-pointer">contact</span>
         </Link>
       </div>

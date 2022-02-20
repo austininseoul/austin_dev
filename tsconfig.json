@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "pages/resume.jsx", "scripts/sitemap-generator.js"  ],
   "exclude": [
     "node_modules"
   ]

@@ -10,6 +10,7 @@ module.exports = {
         // sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         sans: ["Outfit", "sans-serif"],
         mono: ["Fira Code", "monospace"],
+        serif: ["Batang", "cursive"],
       },
       animation: {
         blob: "blob 7s infinite",
