@@ -1,45 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://localhost:3000</loc>
-    <lastmod>2022-02-20T07:55:15.641Z</lastmod>
+    <loc>https://austinw.xyz</loc>
+    <lastmod>2022-02-22T04:16:55.383Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/privacy</loc>
-    <lastmod>2022-02-20T07:55:15.641Z</lastmod>
+    <loc>https://austinw.xyz/privacy</loc>
+    <lastmod>2022-02-22T04:16:55.383Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/resume</loc>
-    <lastmod>2022-02-20T07:55:15.641Z</lastmod>
+    <loc>https://austinw.xyz/resume</loc>
+    <lastmod>2022-02-22T04:16:55.383Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/terms</loc>
-    <lastmod>2022-02-20T07:55:15.641Z</lastmod>
+    <loc>https://austinw.xyz/terms</loc>
+    <lastmod>2022-02-22T04:16:55.383Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/projects/index</loc>
-    <lastmod>2022-02-20T07:55:15.641Z</lastmod>
+    <loc>https://austinw.xyz/projects</loc>
+    <lastmod>2022-02-22T04:16:55.383Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>http://localhost:3000/projects/[slug]</loc>
-    <lastmod>2022-02-20T07:55:15.641Z</lastmod>
+    <loc>https://austinw.xyz/videos</loc>
+    <lastmod>2022-02-22T04:16:55.383Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://localhost:3000/videos/index</loc>
-    <lastmod>2022-02-20T07:55:15.641Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  </url>  <url>
+      <loc>https://austinw.xyz/projects/showkase</loc>
+      <lastmod>2022-02-22T04:16:56.036Z</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+    </url>,  <url>
+      <loc>https://austinw.xyz/projects/twitter-spaces</loc>
+      <lastmod>2022-02-22T04:16:56.036Z</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+    </url>,  <url>
+      <loc>https://austinw.xyz/projects/nft-ticketing-app</loc>
+      <lastmod>2022-02-22T04:16:56.036Z</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+    </url>
 </urlset>
